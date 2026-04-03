@@ -1,7 +1,109 @@
-<h2>Menu List</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu</title>
 
-<ul>
-{% for dish in dishes %}
-<li>{{dish.name}} - ₹{{dish.cost}}</li>
-{% endfor %}
-</ul>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1f1c2c, #928dab);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 40px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+}
+
+.price {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e60000;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🍽 Our Menu</h1>
+
+<div class="menu-container">
+
+<div class="card">Pizza <br><span class="price">₹120</span></div>
+<div class="card">Burger <br><span class="price">₹80</span></div>
+<div class="card">Pasta <br><span class="price">₹100</span></div>
+<div class="card">Sandwich <br><span class="price">₹60</span></div>
+<div class="card">French Fries <br><span class="price">₹70</span></div>
+<div class="card">Cheese Balls <br><span class="price">₹90</span></div>
+<div class="card">Veg Roll <br><span class="price">₹50</span></div>
+<div class="card">Paneer Tikka <br><span class="price">₹150</span></div>
+<div class="card">Chicken Wings <br><span class="price">₹180</span></div>
+<div class="card">Fried Rice <br><span class="price">₹110</span></div>
+<div class="card">Noodles <br><span class="price">₹100</span></div>
+<div class="card">Manchurian <br><span class="price">₹130</span></div>
+<div class="card">Soup <br><span class="price">₹60</span></div>
+<div class="card">Salad <br><span class="price">₹50</span></div>
+<div class="card">Ice Cream <br><span class="price">₹40</span></div>
+<div class="card">Brownie <br><span class="price">₹70</span></div>
+<div class="card">Milkshake <br><span class="price">₹90</span></div>
+<div class="card">Cold Coffee <br><span class="price">₹80</span></div>
+<div class="card">Juice <br><span class="price">₹40</span></div>
+<div class="card">Tea <br><span class="price">₹20</span></div>
+<div class="card">Coffee <br><span class="price">₹30</span></div>
+<div class="card">Idli <br><span class="price">₹40</span></div>
+<div class="card">Dosa <br><span class="price">₹60</span></div>
+<div class="card">Vada <br><span class="price">₹30</span></div>
+<div class="card">Biryani <br><span class="price">₹180</span></div>
+<div class="card">Paratha <br><span class="price">₹50</span></div>
+<div class="card">Dal Rice <br><span class="price">₹70</span></div>
+<div class="card">Chapati Curry <br><span class="price">₹80</span></div>
+<div class="card">Pizza Combo <br><span class="price">₹200</span></div>
+<div class="card">Family Meal <br><span class="price">₹350</span></div>
+
+</div>
+
+<br>
+
+<a href="/">
+<button>⬅ Back</button>
+</a>
+
+</body>
+</html>

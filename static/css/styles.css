@@ -1,0 +1,101 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+background: linear-gradient(-45deg,#141e30,#243b55,#0f2027,#2c5364);
+background-size:400% 400%;
+animation: bg 10s ease infinite;
+color:white;
+}
+
+/* animated background */
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+.navbar{
+padding:15px 40px;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:45px;
+border-radius:50%;
+}
+
+/* MAIN */
+.container{
+text-align:center;
+margin-top:60px;
+}
+
+.title{
+font-size:42px;
+margin-bottom:30px;
+}
+
+/* FOOD IMAGES */
+.food-gallery{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-bottom:40px;
+}
+
+.food{
+width:220px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.5);
+animation: float 4s ease-in-out infinite;
+transition:0.4s;
+}
+
+.food:hover{
+transform:scale(1.1);
+}
+
+/* floating animation */
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+/* CARDS */
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+.card{
+width:220px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+text-decoration:none;
+color:white;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+background:rgba(255,255,255,0.2);
+}

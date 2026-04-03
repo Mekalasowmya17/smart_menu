@@ -4,4 +4,5 @@ from routes.menu_routes import menu_bp
 app = Flask(__name__)
 app.register_blueprint(menu_bp)
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)

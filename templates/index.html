@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Smart Menu</title>
+<title>Smart Menu</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
 </head>
 
 <body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <div class="navbar">
     <div class="nav-left">
-        <img src="/static/images/logo.jpg">
-        <span class="title">Smart Menu</span>
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" class="logo">
+        <h2>Smart Menu</h2>
     </div>
 </div>
 
-<!-- Floating Food Images -->
-<img src="{{ url_for('static', filename='static/images/food1.png') }}" class="food food1">
-<img src="{{ url_for('static', filename='static/images/food2.png') }}" class="food food2">
-
-<!-- Main -->
+<!-- MAIN -->
 <div class="container">
 
-    <h1 class="heading">🍽 Smart Menu Dashboard</h1>
+<h1 class="title">🍽 Smart Menu Dashboard</h1>
 
-    <div class="card-container">
+<!-- FOOD SECTION -->
+<div class="food-gallery">
+    <img src="{{ url_for('static', filename='images/food1.png') }}" class="food">
+    <img src="{{ url_for('static', filename='images/food2.png') }}" class="food">
+</div>
 
-        <a href="/add_menu" class="card green">
-            <h2>➕ Add Dish</h2>
-            <p>Add new food items</p>
-        </a>
+<!-- BUTTON CARDS -->
+<div class="cards">
 
-        <a href="/view_menu" class="card blue">
-            <h2>📋 View Menu</h2>
-            <p>View all dishes</p>
-        </a>
+    <a href="/add_items" class="card">
+        <h2>➕ Add Dish</h2>
+        <p>Add new food items</p>
+    </a>
 
-        <a href="/optimize" class="card orange">
-            <h2>⚡ Optimize</h2>
-            <p>Smart cost planning</p>
-        </a>
+    <a href="/view_menu" class="card">
+        <h2>📋 View Menu</h2>
+        <p>See all dishes</p>
+    </a>
 
-    </div>
+    
+
+</div>
 
 </div>
 

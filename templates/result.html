@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recommended Menu</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 40px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+}
+
+.price {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.total-box {
+    margin: 20px auto;
+    padding: 15px;
+    width: 250px;
+    background: #ff4d4d;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e60000;
+    transform: scale(1.05);
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🍽 Recommended Menu</h1>
+
+<div class="menu-container">
+
+{% for dish in dishes %}
+<div class="card">
+    <h3>{{ dish.name }}</h3>
+    <p class="price">₹{{ dish.cost }}</p>
+</div>
+{% endfor %}
+
+</div>
+
+<div class="total-box">
+    Total: ₹{{ total }}
+</div>
+
+<br>
+
+<a href="/">
+<button>⬅ Back to Dashboard</button>
+</a>
+
+</body>
+</html>

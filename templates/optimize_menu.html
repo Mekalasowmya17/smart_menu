@@ -1,17 +1,79 @@
-<h2>Optimize Menu</h2>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enter Budget</title>
 
-<form method="POST">
-<input name="budget" placeholder="Enter Budget">
-<button type="submit">Optimize</button>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e60000;
+    transform: scale(1.05);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💰 Enter Your Budget</h1>
+
+<form method="POST" action="/optimize">
+    
+    <input type="number" name="budget" placeholder="Enter amount ₹" required>
+    
+    <br>
+    <button type="submit">⚡ Optimize</button>
+
 </form>
 
-{% if result %}
-<h3>Recommended Menu</h3>
-<ul>
-{% for item in result.menu %}
-<li>{{item.name}} - ₹{{item.cost}}</li>
-{% endfor %}
-</ul>
+</div>
 
-<p>Total Cost: ₹{{result.total_cost}}</p>
-{% endif %}
+</body>
+</html>
