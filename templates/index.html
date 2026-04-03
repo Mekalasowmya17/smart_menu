@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Menu Planning System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+
+<!-- Logo -->
+<img src="{{ url_for('static', filename='images/logo.png') }}" width="120">
+
+<h1>Smart Menu Planning System</h1>
+
+<br>
+
+<a href="/add_menu">
+<button>Add Dish</button>
+</a>
+
+<br><br>
+
+<a href="/view_menu">
+<button>View Menu</button>
+</a>
+
+<br><br>
+
+<a href="/optimize">
+<button>Optimize Menu</button>
+</a>
+
+</body>
+</html>

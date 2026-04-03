@@ -1,0 +1,7 @@
+<h2>Menu List</h2>
+
+<ul>
+{% for dish in dishes %}
+<li>{{dish.name}} - ₹{{dish.cost}}</li>
+{% endfor %}
+</ul>

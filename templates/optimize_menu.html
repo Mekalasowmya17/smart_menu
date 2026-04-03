@@ -1,0 +1,17 @@
+<h2>Optimize Menu</h2>
+
+<form method="POST">
+<input name="budget" placeholder="Enter Budget">
+<button type="submit">Optimize</button>
+</form>
+
+{% if result %}
+<h3>Recommended Menu</h3>
+<ul>
+{% for item in result.menu %}
+<li>{{item.name}} - ₹{{item.cost}}</li>
+{% endfor %}
+</ul>
+
+<p>Total Cost: ₹{{result.total_cost}}</p>
+{% endif %}
